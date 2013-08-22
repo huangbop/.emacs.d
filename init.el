@@ -27,7 +27,7 @@
 (add-to-list 'load-path "~/.emacs.d/color-theme-sanityinc-solarized")
 (require 'color-theme-sanityinc-solarized)
 (if window-system
-    (color-theme-solarized-dark))
+    (color-theme-sanityinc-solarized-dark))
 
 ;; gui frames
 (setq use-file-dialog nil)
@@ -68,6 +68,10 @@
 
 ;; editing utils
 (column-number-mode)
+
+(if (equal system-type 'windows-nt)
+    (set-default-font "Courier New-12")
+  (set-default-font "Monospace-12"))
 
 (require 'whole-line-or-region)
 (whole-line-or-region-mode)
@@ -110,8 +114,16 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
-;; windows special
-(if (equal system-type 'windows-nt)
-    (set-default-font "Courier New-12"))
+;; cscope
+(unless (equal system-type 'windows-nt)
+  (require 'xcscope)
+  (define-key cscope:map (kbd "C-,") 'cscope-find-this-symbol)
+  (define-key cscope:map (kbd "C-.") 'cscope-find-global-definition)
+  (define-key cscope:map (kbd "M-,") 'cscope-find-functions-calling-this-function)
+  (define-key cscope:map (kbd "M-.") 'cscope-find-called-functions)
+  (define-key cscope:map (kbd "M-p") 'cscope-prev-symbol)
+  (define-key cscope:map (kbd "M-n") 'cscope-next-symbol)
+  (define-key cscope:map (kbd "M-*") 'cscope-pop-mark))
+
 
 ;;; init.el ends here
