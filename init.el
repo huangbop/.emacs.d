@@ -11,19 +11,25 @@
 (ac-config-default)
 
 ;; buffer behaviors
-(require 'window-numbering)
-(window-numbering-mode t)
+(require 'switch-window)
+(setq switch-window-shortcut-style 'alphabet)
+
 (winner-mode t)
-(global-set-key (kbd "M-S-<left>") 'enlarge-window-horizontally)
-(global-set-key (kbd "M-S-<right>") 'shrink-window-horizontally)
-(global-set-key (kbd "M-S-<down>") 'shrink-window)
-(global-set-key (kbd "M-S-<up>") 'enlarge-window)
+
+(global-set-key (kbd "C-S-<left>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-S-<right>") 'shrink-window-horizontally)
+(global-set-key (kbd "C-S-<down>") 'shrink-window)
+(global-set-key (kbd "C-S-<up>") 'enlarge-window)
+
+(require 'buffer-move)
+(global-set-key (kbd "M-S-<left>") 'buf-move-left)
+(global-set-key (kbd "M-S-<right>") 'buf-move-right)
+(global-set-key (kbd "M-S-<up>") 'buf-move-up)
+(global-set-key (kbd "M-S-<down>") 'buf-move-down)
 
 ;; color theme
 (add-to-list 'load-path "~/.emacs.d/color-theme")
 (require 'color-theme)
-(add-to-list 'load-path "~/.emacs.d/color-theme-solarized")
-(require 'color-theme-solarized)
 (add-to-list 'load-path "~/.emacs.d/color-theme-sanityinc-solarized")
 (require 'color-theme-sanityinc-solarized)
 (if window-system
@@ -69,10 +75,12 @@
 ;; editing utils
 (column-number-mode)
 
-(if (equal system-type 'windows-nt)
-    (set-default-font "Courier New-12")
-  (set-default-font "Monospace-12"))
-
+(cond 
+ ((equal system-type 'windows-nt)
+  (set-default-font "Courier New-12"))
+ ((equal system-type 'gnu/linux)
+  (set-default-font "Monospace-12")))
+  
 (require 'whole-line-or-region)
 (whole-line-or-region-mode)
 
