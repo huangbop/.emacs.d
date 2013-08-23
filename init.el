@@ -11,8 +11,8 @@
 (ac-config-default)
 
 ;; buffer behaviors
-(require 'switch-window)
-(setq switch-window-shortcut-style 'alphabet)
+(require 'window-numbering)
+(window-numbering-mode)
 
 (winner-mode t)
 
@@ -77,7 +77,7 @@
 
 (cond 
  ((equal system-type 'windows-nt)
-  (set-default-font "Courier New-12"))
+  (set-default-font "Courier New-13"))
  ((equal system-type 'gnu/linux)
   (set-default-font "Monospace-12")))
   
@@ -114,8 +114,8 @@
 (global-linum-mode)
 
 ;; jedi.el
-;; need jedi : pip install jedi
-;; need python-epc : pip install epc
+(require 'anything-config)
+
 (add-to-list 'load-path "~/.emacs.d/jedi")
 (setq jedi:setup-keys t) ; before require
 (require 'jedi)
