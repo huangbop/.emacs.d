@@ -133,5 +133,14 @@
   (define-key cscope:map (kbd "M-n") 'cscope-next-symbol)
   (define-key cscope:map (kbd "M-*") 'cscope-pop-mark))
 
+;; c special
+(setq c-default-style "linux"
+      c-basic-offset 4)
+
+;; yasnippet
+(add-to-list 'load-path "~/.emacs.d/yasnippet")
+(require 'yasnippet)
+(yas-global-mode)
+
 
 ;;; init.el ends here
