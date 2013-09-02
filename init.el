@@ -75,11 +75,11 @@
 ;; editing utils
 (column-number-mode)
 
-(cond 
- ((equal system-type 'windows-nt)
-  (set-default-font "Courier New-13"))
- ((equal system-type 'gnu/linux)
-  (set-default-font "Monospace-12")))
+(ecase system-type
+  ('windows-nt
+   (set-default-font "Courier New-13"))
+  ('gnu/linux
+   (set-default-font "Monospace-11")))
   
 (require 'whole-line-or-region)
 (whole-line-or-region-mode)
