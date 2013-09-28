@@ -33,7 +33,7 @@
 (add-to-list 'load-path "~/.emacs.d/color-theme-sanityinc-solarized")
 (require 'color-theme-sanityinc-solarized)
 (if window-system
-    (color-theme-sanityinc-solarized-dark))
+    (color-theme-sanityinc-solarized-light))
 
 ;; gui frames
 (setq use-file-dialog nil)
@@ -134,8 +134,7 @@
   (define-key cscope:map (kbd "M-*") 'cscope-pop-mark))
 
 ;; c special
-(setq c-default-style "linux"
-      c-basic-offset 4)
+(setq c-default-style "linux")
 
 
 ;;; init.el ends here
