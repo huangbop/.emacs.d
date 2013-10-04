@@ -122,6 +122,9 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
+;; ipython
+(require 'ipython)
+
 ;; cscope
 (unless (equal system-type 'windows-nt)
   (require 'xcscope)
@@ -133,7 +136,6 @@
   (define-key cscope:map (kbd "M-n") 'cscope-next-symbol)
   (define-key cscope:map (kbd "M-*") 'cscope-pop-mark))
 
-;; c special
 (setq c-default-style "linux")
 
 
