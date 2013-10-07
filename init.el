@@ -30,10 +30,14 @@
 ;; color theme
 (add-to-list 'load-path "~/.emacs.d/color-theme")
 (require 'color-theme)
+
 (add-to-list 'load-path "~/.emacs.d/color-theme-sanityinc-solarized")
 (require 'color-theme-sanityinc-solarized)
+
+(require 'color-theme-huangbop)
+
 (if window-system
-    (color-theme-sanityinc-solarized-light))
+    (color-theme-huangbop-default))
 
 ;; gui frames
 (setq use-file-dialog nil)
@@ -104,8 +108,8 @@
 
 (require 'fill-column-indicator)
 (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
-(global-fci-mode 1)
 (setq-default fci-rule-column 80)
+;(global-fci-mode 1)
 
 (require 'move-text)
 (move-text-default-bindings)
