@@ -48,6 +48,7 @@
 (set-fringe-mode 0)
 (setq indicate-empty-lines t)
 
+(menu-bar-mode nil)
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
 (when (fboundp 'set-scroll-bar-mode)
