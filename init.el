@@ -9,6 +9,8 @@
 	     "~/.emacs.d/auto-complete/ac-dict")
 (require 'auto-complete-config)
 (ac-config-default)
+(setq ac-auto-start nil)
+(ac-set-trigger-key "TAB")
 
 ;; buffer behaviors
 (require 'window-numbering)
