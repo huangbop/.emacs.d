@@ -84,7 +84,7 @@
 
 (ecase system-type
   ('windows-nt
-   (set-default-font "Courier New-13"))
+   (set-default-font "Courier New-14"))
   ('gnu/linux
    (set-default-font "Monospace-11")))
   
