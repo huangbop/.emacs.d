@@ -82,6 +82,9 @@
 ;; editing utils
 (column-number-mode)
 
+(setq-default truncate-lines t)
+(setq truncate-partial-width-windows nil)
+
 (ecase system-type
   ('windows-nt
    (set-default-font "Courier New-14"))
@@ -143,7 +146,8 @@
   (define-key cscope:map (kbd "M-n") 'cscope-next-symbol)
   (define-key cscope:map (kbd "M-*") 'cscope-pop-mark))
 
-(setq c-default-style "linux")
+(setq c-default-style "linux"
+      c-basic-offset 4)
 
 
 ;;; init.el ends here
