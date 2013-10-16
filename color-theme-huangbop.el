@@ -1,7 +1,8 @@
-(defun color-theme-huangbop-default ()
+
+(defun color-theme-huangbop-dark ()
   (interactive)
   (color-theme-install
-   '(color-theme-huangbop-default
+   '(color-theme-huangbop-dark
       ((background-color . "#000000")
       (background-mode . dark)
       (border-color . "red")

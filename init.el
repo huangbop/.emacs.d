@@ -39,7 +39,7 @@
 (require 'color-theme-huangbop)
 
 (if window-system
-    (color-theme-huangbop-default))
+    (color-theme-huangbop-dark))
 
 ;; gui frames
 (setq use-file-dialog nil)
