@@ -106,8 +106,10 @@
 
 (add-to-list 'load-path "~/.emacs.d/multiple-cursors")
 (require 'multiple-cursors)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-S-M") 'mc/skip-to-previous-like-this)
+(global-set-key (kbd "C-?") 'mc/skip-to-next-like-this )
 
 (require 'ace-jump-mode)
 (global-set-key (kbd "C-;") 'ace-jump-mode)
