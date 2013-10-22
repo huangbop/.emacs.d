@@ -151,5 +151,12 @@
 (setq c-default-style "linux"
       c-basic-offset 4)
 
+;; git
+(add-to-list 'load-path "~/.emacs.d/magit")
+(require 'magit)
+
+;; egg
+(add-to-list 'load-path "~/.emacs.d/egg")
+(require 'egg)
 
 ;;; init.el ends here
