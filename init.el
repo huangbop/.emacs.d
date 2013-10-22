@@ -151,7 +151,7 @@
 (setq c-default-style "linux"
       c-basic-offset 4)
 
-;; git
+;; magit
 (add-to-list 'load-path "~/.emacs.d/magit")
 (require 'magit)
 
