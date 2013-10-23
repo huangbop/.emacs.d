@@ -80,6 +80,8 @@
 (global-set-key (kbd "M-x") 'smex)
 
 ;; editing utils
+(blink-cursor-mode -1)
+
 (column-number-mode)
 
 (setq-default truncate-lines t)
