@@ -159,4 +159,14 @@
 (add-to-list 'load-path "~/.emacs.d/egg")
 (require 'egg)
 
+;; yasnippet
+(require 'dropdown-list)
+(setq yas/prompt-functions '(yas/dropdown-prompt
+			     yas/ido-prompt
+			     yas/completing-prompt))
+(require 'yasnippet)
+(yas/load-directory "~/.emacs.d/snippets")
+(yas/global-mode)
+
+
 ;;; init.el ends here
