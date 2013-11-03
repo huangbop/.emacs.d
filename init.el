@@ -4,7 +4,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;; theme
-(load-theme 'zenburn t)
+(load-theme 'spolsky t)
 
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
