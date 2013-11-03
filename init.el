@@ -129,7 +129,7 @@
 (setq jedi:complete-on-dot t)
 
 ;; cscope
-(when (equal system-type 'windows-nt)
+(unless (equal system-type 'windows-nt)
   (require 'xcscope)
   (define-key cscope:map (kbd "C-,") 'cscope-find-this-symbol)
   (define-key cscope:map (kbd "C-.") 'cscope-find-global-definition)
