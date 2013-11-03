@@ -1,6 +1,7 @@
 ;;; init.el --- hb' emacs init file
 
 (add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
@@ -29,18 +30,6 @@
 (global-set-key (kbd "M-S-<up>") 'buf-move-up)
 (global-set-key (kbd "M-S-<down>") 'buf-move-down)
 
-;; color theme
-(add-to-list 'load-path "~/.emacs.d/color-theme")
-(require 'color-theme)
-
-(add-to-list 'load-path "~/.emacs.d/color-theme-sanityinc-solarized")
-(require 'color-theme-sanityinc-solarized)
-
-(require 'color-theme-huangbop)
-
-(if window-system
-    (color-theme-huangbop-dark))
-
 ;; gui frames
 (setq use-file-dialog nil)
 (setq use-dialog-box nil)
@@ -63,9 +52,10 @@
 					 'fullboth)))
 (global-set-key [(meta return)] 'toggle-fullscreen)
 
-;; ido
+;; dired+
 (require 'dired+)
 
+;; ido
 (ido-mode t)
 (ido-everywhere t)
 (setq ido-enable-flex-matching t)
@@ -76,6 +66,7 @@
 (require 'ido-ubiquitous)
 (ido-ubiquitous-mode t)
 
+;; smex
 (require 'smex)
 (global-set-key (kbd "M-x") 'smex)
 
@@ -119,7 +110,6 @@
 (require 'fill-column-indicator)
 (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
 (setq-default fci-rule-column 80)
-;(global-fci-mode 1)
 
 (require 'move-text)
 (move-text-default-bindings)
@@ -136,11 +126,8 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t)
 
-;; ipython
-(require 'ipython)
-
 ;; cscope
-(unless (equal system-type 'windows-nt)
+(when (equal system-type 'windows-nt)
   (require 'xcscope)
   (define-key cscope:map (kbd "C-,") 'cscope-find-this-symbol)
   (define-key cscope:map (kbd "C-.") 'cscope-find-global-definition)
@@ -150,6 +137,7 @@
   (define-key cscope:map (kbd "M-n") 'cscope-next-symbol)
   (define-key cscope:map (kbd "M-*") 'cscope-pop-mark))
 
+;; c style
 (setq c-default-style "linux"
       c-basic-offset 4)
 
