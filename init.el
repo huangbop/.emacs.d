@@ -3,6 +3,9 @@
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
+;; theme
+(load-theme 'zenburn t)
+
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (require 'auto-complete)
@@ -73,6 +76,8 @@
 ;; editing utils
 (blink-cursor-mode -1)
 
+(electric-pair-mode 1)
+
 (column-number-mode)
 
 (setq-default truncate-lines t)
@@ -86,9 +91,6 @@
   
 (require 'whole-line-or-region)
 (whole-line-or-region-mode)
-
-(require 'autopair)
-(autopair-global-mode)
 
 (require 'mic-paren)
 (paren-activate)
