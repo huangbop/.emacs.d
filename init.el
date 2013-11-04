@@ -3,7 +3,7 @@
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
-;; theme
+;; default theme
 (load-theme 'spolsky t)
 
 ;; auto-complete
@@ -160,5 +160,8 @@
 (yas/load-directory "~/.emacs.d/snippets")
 (yas/global-mode)
 
+;; tramp on windows
+(if (equal system-type 'windows-nt)
+    (setq tramp-default-method "plink"))
 
 ;;; init.el ends here
