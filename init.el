@@ -3,7 +3,7 @@
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
-;; theme
+;; default theme
 (load-theme 'spolsky t)
 
 ;; auto-complete
@@ -139,9 +139,22 @@
   (define-key cscope:map (kbd "M-n") 'cscope-next-symbol)
   (define-key cscope:map (kbd "M-*") 'cscope-pop-mark))
 
-;; c style
-(setq c-default-style "linux"
-      c-basic-offset 4)
+;; linux c style
+(setq c-default-style "linux")
+
+;; GUD
+(global-set-key (kbd "<f7>") 'gud-up)
+(global-set-key (kbd "<S-f7>") 'gud-down)
+(global-set-key (kbd "<f8>") 'gud-print)
+(global-set-key (kbd "<M-f8>") 'gud-watch)
+(global-set-key (kbd "<f9>") 'gud-break)
+(global-set-key (kbd "<M-f9>") 'gud-tbreak)
+(global-set-key (kbd "<S-f9>") 'gud-remove)
+(global-set-key (kbd "<f10>") 'gud-next)
+(global-set-key (kbd "<M-f10>") 'gud-until)
+(global-set-key (kbd "<f11>") 'gud-step)
+(global-set-key (kbd "<S-f11>") 'gud-finish)
+(global-set-key (kbd "<f12>") 'gdb-many-windows)
 
 ;; magit
 (add-to-list 'load-path "~/.emacs.d/magit")
