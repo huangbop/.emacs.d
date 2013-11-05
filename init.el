@@ -139,9 +139,8 @@
   (define-key cscope:map (kbd "M-n") 'cscope-next-symbol)
   (define-key cscope:map (kbd "M-*") 'cscope-pop-mark))
 
-;; c style
-(setq c-default-style "linux"
-      c-basic-offset 4)
+;; use linux c style
+(setq c-default-style "linux")
 
 ;; magit
 (add-to-list 'load-path "~/.emacs.d/magit")
