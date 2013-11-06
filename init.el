@@ -44,14 +44,14 @@
 
 (menu-bar-mode -1)
 (when (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
+      (tool-bar-mode -1))
 (when (fboundp 'set-scroll-bar-mode)
-  (set-scroll-bar-mode nil))
+      (set-scroll-bar-mode nil))
 
 (defun toggle-fullscreen ()
   (interactive)
   (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen)
-                                           nil
+					 nil
 					 'fullboth)))
 (global-set-key [(meta return)] 'toggle-fullscreen)
 
@@ -86,9 +86,9 @@
 (ecase system-type
   ('windows-nt
    (set-default-font "Courier New-13"))
-  ('gnu/linux
-   (set-default-font "Monospace-11")))
-  
+   ('gnu/linux
+    (set-default-font "Monospace-11")))
+
 (require 'whole-line-or-region)
 (whole-line-or-region-mode)
 
@@ -130,16 +130,16 @@
 
 ;; cscope
 (unless (equal system-type 'windows-nt)
-  (require 'xcscope)
-  (define-key cscope:map (kbd "C-,") 'cscope-find-this-symbol)
-  (define-key cscope:map (kbd "C-.") 'cscope-find-global-definition)
-  (define-key cscope:map (kbd "M-,") 'cscope-find-functions-calling-this-function)
-  (define-key cscope:map (kbd "M-.") 'cscope-find-called-functions)
-  (define-key cscope:map (kbd "M-p") 'cscope-prev-symbol)
-  (define-key cscope:map (kbd "M-n") 'cscope-next-symbol)
-  (define-key cscope:map (kbd "M-*") 'cscope-pop-mark))
+	(require 'xcscope)
+	(define-key cscope:map (kbd "C-,") 'cscope-find-this-symbol)
+	(define-key cscope:map (kbd "C-.") 'cscope-find-global-definition)
+	(define-key cscope:map (kbd "M-,") 'cscope-find-functions-calling-this-function)
+	(define-key cscope:map (kbd "M-.") 'cscope-find-called-functions)
+	(define-key cscope:map (kbd "M-p") 'cscope-prev-symbol)
+	(define-key cscope:map (kbd "M-n") 'cscope-next-symbol)
+	(define-key cscope:map (kbd "M-*") 'cscope-pop-mark))
 
-;; linux c style
+;; use linux c style
 (setq c-default-style "linux")
 
 ;; GUD
@@ -173,5 +173,8 @@
 (yas/load-directory "~/.emacs.d/snippets")
 (yas/global-mode)
 
+;; tramp on windows
+(if (equal system-type 'windows-nt)
+  (setq tramp-default-method "plink"))
 
 ;;; init.el ends here
