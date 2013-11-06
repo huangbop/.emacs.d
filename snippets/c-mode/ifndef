@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: ifndef
+# key: ifnd
+# --
+#ifndef ${1:SYMBOL}
+$0
+#endif
