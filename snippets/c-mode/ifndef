@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: ifndef
-# key: ifnd
+# key: ifn
 # --
 #ifndef ${1:SYMBOL}
 $0
