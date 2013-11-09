@@ -162,6 +162,12 @@
 ;; egg
 (add-to-list 'load-path "~/.emacs.d/egg")
 (require 'egg)
+(setq egg-buffer-hide-help-on-start
+      '(egg-status-buffer-mode
+	egg-log-buffer-mode
+	egg-file-log-buffer-mode
+	egg-diff-buffer-mode
+	egg-commit-buffer-mode))
 
 ;; yasnippet
 (require 'dropdown-list)
