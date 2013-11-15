@@ -141,12 +141,6 @@
  python-shell-completion-string-code
  "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
-(if (equal system-type 'windows-nt)
-    (setq
-     python-shell-interpreter "python"
-     python-shell-interpreter-args
-     "-i d:\\Python27\\Scripts\\ipython-script.py"))
-
 ;; cscope
 (unless (equal system-type 'windows-nt)
 	(require 'xcscope)
