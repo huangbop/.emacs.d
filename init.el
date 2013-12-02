@@ -147,15 +147,14 @@
      python-shell-interpreter-args "-i d:/Python27/Scripts/ipython-script.py"))
 
 ;; cscope
-(unless (equal system-type 'windows-nt)
-	(require 'xcscope)
-	(define-key cscope:map (kbd "C-,") 'cscope-find-this-symbol)
-	(define-key cscope:map (kbd "C-.") 'cscope-find-global-definition)
-	(define-key cscope:map (kbd "M-,") 'cscope-find-functions-calling-this-function)
-	(define-key cscope:map (kbd "M-.") 'cscope-find-called-functions)
-	(define-key cscope:map (kbd "M-p") 'cscope-prev-symbol)
-	(define-key cscope:map (kbd "M-n") 'cscope-next-symbol)
-	(define-key cscope:map (kbd "M-*") 'cscope-pop-mark))
+(require 'xcscope)
+(define-key cscope:map (kbd "C-,") 'cscope-find-this-symbol)
+(define-key cscope:map (kbd "C-.") 'cscope-find-global-definition)
+(define-key cscope:map (kbd "M-,") 'cscope-find-functions-calling-this-function)
+(define-key cscope:map (kbd "M-.") 'cscope-find-called-functions)
+(define-key cscope:map (kbd "M-p") 'cscope-prev-symbol)
+(define-key cscope:map (kbd "M-n") 'cscope-next-symbol)
+(define-key cscope:map (kbd "M-*") 'cscope-pop-mark)
 
 ;; use linux c style
 (setq c-default-style "linux")
