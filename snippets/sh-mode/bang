@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: bang
-# key: !
+# key: bang
 # --
 #!/bin/bash
 $0
