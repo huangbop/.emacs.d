@@ -87,7 +87,7 @@
   ('windows-nt
    (set-default-font "Consolas-14"))
    ('gnu/linux
-    (set-default-font "Inconsolata-13")))
+    (set-default-font "Monospace-11")))
 
 (require 'whole-line-or-region)
 (whole-line-or-region-mode)
