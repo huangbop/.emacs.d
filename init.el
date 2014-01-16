@@ -44,9 +44,9 @@
 
 (menu-bar-mode -1)
 (when (fboundp 'tool-bar-mode)
-      (tool-bar-mode -1))
+  (tool-bar-mode -1))
 (when (fboundp 'set-scroll-bar-mode)
-      (set-scroll-bar-mode nil))
+  (set-scroll-bar-mode nil))
 
 (defun toggle-fullscreen ()
   (interactive)
@@ -87,9 +87,9 @@
 
 (ecase system-type
   ('windows-nt
-   (set-default-font "Consolas-12"))
-   ('gnu/linux
-    (set-default-font "Monospace-11")))
+   (set-default-font "Consolas-13"))
+  ('gnu/linux
+   (set-default-font "Monospace-11")))
 
 (require 'whole-line-or-region)
 (whole-line-or-region-mode)
@@ -199,6 +199,9 @@
 
 ;; tramp on windows
 (if (equal system-type 'windows-nt)
-  (setq tramp-default-method "plink"))
+    (setq tramp-default-method "plink"))
+
+;; json
+(require 'json-mode)
 
 ;;; init.el ends here
