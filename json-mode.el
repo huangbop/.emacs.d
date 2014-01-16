@@ -89,7 +89,7 @@
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
 
-(define-key json-mode-map (kbd "C-c C-f") 'json-mode-beautify)
+(define-key json-mode-map (kbd "C-c C-j") 'json-mode-beautify)
 
 (provide 'json-mode)
 ;;; json-mode.el ends here
