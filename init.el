@@ -85,6 +85,11 @@
 (setq-default truncate-lines t)
 (setq truncate-partial-width-windows nil)
 
+(defun yank-pop-forward (arg)
+  (interactive "p")
+  (yank-pop (- arg)))
+(global-set-key (kbd "M-Y") 'yank-pop-forward)
+
 (ecase system-type
   ('windows-nt
    (set-default-font "Consolas-13"))
