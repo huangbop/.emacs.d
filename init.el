@@ -209,4 +209,7 @@
 ;; json
 (require 'json-mode)
 
+;; django
+(require 'python-django)
+
 ;;; init.el ends here
