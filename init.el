@@ -212,4 +212,7 @@
 ;; django
 (require 'python-django)
 
+;; assembly
+(setq asm-comment-char ?\@)
+
 ;;; init.el ends here
