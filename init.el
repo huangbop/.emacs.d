@@ -201,4 +201,10 @@
 (if (equal system-type 'windows-nt)
   (setq tramp-default-method "plink"))
 
+;; slime
+(add-to-list 'load-path "~/.emacs.d/slime-2.4/")
+(require 'slime-autoloads)
+(setq inferior-lisp-program "/usr/bin/sbcl")
+(setq slime-contribs '(slime-fancy))
+
 ;;; init.el ends here
