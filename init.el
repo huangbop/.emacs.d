@@ -44,9 +44,9 @@
 
 (menu-bar-mode -1)
 (when (fboundp 'tool-bar-mode)
-      (tool-bar-mode -1))
+  (tool-bar-mode -1))
 (when (fboundp 'set-scroll-bar-mode)
-      (set-scroll-bar-mode nil))
+  (set-scroll-bar-mode nil))
 
 (defun toggle-fullscreen ()
   (interactive)
@@ -84,6 +84,11 @@
 
 (setq-default truncate-lines t)
 (setq truncate-partial-width-windows nil)
+
+(defun yank-pop-forward (arg)
+  (interactive "p")
+  (yank-pop (- arg)))
+(global-set-key (kbd "M-Y") 'yank-pop-forward)
 
 (ecase system-type
   ('windows-nt
@@ -199,7 +204,13 @@
 
 ;; tramp on windows
 (if (equal system-type 'windows-nt)
-  (setq tramp-default-method "plink"))
+    (setq tramp-default-method "plink"))
+
+;; json
+(require 'json-mode)
+
+;; django
+(require 'python-django)
 
 ;; slime
 (add-to-list 'load-path "~/.emacs.d/slime-2.4/")
