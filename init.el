@@ -93,8 +93,8 @@
 (ecase system-type
   ('windows-nt
    (set-default-font "Consolas-12"))
-  ('gnu/linux
-   (set-default-font "Monospace-11")))
+   ('gnu/linux
+    (set-default-font "Inconsolata-12")))
 
 (require 'whole-line-or-region)
 (whole-line-or-region-mode)
@@ -214,5 +214,15 @@
 
 ;; assembly
 (setq asm-comment-char ?\@)
+
+;; slime
+(add-to-list 'load-path "~/.emacs.d/slime-2.4/")
+(require 'slime-autoloads)
+(ecase system-type
+  ('windows-nt
+   (setq inferior-lisp-program "D:/SBCL/sbcl.exe"))
+  ('gnu/linux
+   (setq inferior-lisp-program "/usr/bin/sbcl")))
+(setq slime-contribs '(slime-fancy))
 
 ;;; init.el ends here
