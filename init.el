@@ -4,7 +4,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;; default theme
-(load-theme 'spolsky t)
+(load-theme 'tango-dark t)
 
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
@@ -212,9 +212,6 @@
 ;; django
 (require 'python-django)
 
-;; assembly
-(setq asm-comment-char ?\@)
-
 ;; slime
 (add-to-list 'load-path "~/.emacs.d/slime-2.4/")
 (require 'slime-autoloads)
@@ -225,5 +222,8 @@
    (setq inferior-lisp-program "/usr/bin/sbcl")))
 (setq slime-contribs '(slime-fancy))
 
+;; gas
+(require 'gas-mode)
+(add-to-list 'auto-mode-alist '("\\.S\\'" . gas-mode))
 
 ;;; init.el ends here
