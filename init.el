@@ -4,7 +4,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;; default theme
-(load-theme 'tango-dark t)
+(load-theme 'huangbop t)
 
 ;; auto-complete
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
