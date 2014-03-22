@@ -22,7 +22,7 @@
 
 (deftheme huangbop  "A dark color theme for Emacs based on Sublime Text 2")
 
-(let ((*background*         "#161A1F")
+(let ((*background*         "#2e3436")
       (*comments*           "#8C8C8C")
       (*constant*           "#FF80F4")
       (*current-line*       "#151515")
@@ -30,7 +30,7 @@
       (*keywords*           "#F92672")
 
       ;; Sidebar line numbers
-      (*line-number*        "#161A1F")
+      (*line-number*        "#2e3436")
       (*line-fg*            "#666")
 
       (*type-face*          "#66D9EF")
