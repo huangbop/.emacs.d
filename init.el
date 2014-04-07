@@ -226,4 +226,8 @@
 (require 'gas-mode)
 (add-to-list 'auto-mode-alist '("\\.S\\'" . gas-mode))
 
+;; ecb
+(add-to-list 'load-path "~/.emacs.d/ecb/")
+(require 'ecb)
+
 ;;; init.el ends here
