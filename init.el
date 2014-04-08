@@ -232,6 +232,8 @@
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(if (equal system-type 'windows-nt)
+    (setq markdown-command "perl ~/.emacs.d/Markdown.pl"))
 
 ;; ecb
 (add-to-list 'load-path "~/.emacs.d/ecb/")
