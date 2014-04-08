@@ -226,6 +226,13 @@
 (require 'gas-mode)
 (add-to-list 'auto-mode-alist '("\\.S\\'" . gas-mode))
 
+;; markdown
+(autoload 'markdown-mode "markdown-mode"
+  "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
 ;; ecb
 (add-to-list 'load-path "~/.emacs.d/ecb/")
 (require 'ecb)
