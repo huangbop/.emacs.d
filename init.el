@@ -239,4 +239,11 @@
 (add-to-list 'load-path "~/.emacs.d/ecb/")
 (require 'ecb)
 
+;; quick-jump
+(require 'quick-jump)
+(global-set-key (kbd "C-M-,") 'quick-jump-go-back)
+(global-set-key (kbd "C-M-SPC") 'quick-jump-push-marker)
+(global-set-key (kbd "C-M-.") 'quick-jump-go-forward)
+(global-set-key (kbd "C-M-m") 'quick-jump-clear-all-marker)
+
 ;;; init.el ends here

@@ -1,5 +1,4 @@
 
-
 ac-comphist.dat
 auto-save-list/
 *.bak
@@ -7,3 +6,5 @@ auto-save-list/
 *#
 .mc-lists.el
 tramp
+semanticdb/
+bookmarks
