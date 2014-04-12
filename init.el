@@ -39,6 +39,7 @@
 (setq inhibit-startup-screen t)
 (setq inhibit-startup-echo-area-message t)
 
+(set-fringe-mode 0)
 (setq indicate-empty-lines t)
 
 (menu-bar-mode -1)
