@@ -39,7 +39,6 @@
 (setq inhibit-startup-screen t)
 (setq inhibit-startup-echo-area-message t)
 
-(set-fringe-mode 0)
 (setq indicate-empty-lines t)
 
 (menu-bar-mode -1)
@@ -123,8 +122,8 @@
 (require 'move-text)
 (move-text-default-bindings)
 
-(require 'linum)
-(global-linum-mode)
+(require 'nlinum)
+(global-nlinum-mode)
 
 ;; jedi.el
 (require 'anything-config)
