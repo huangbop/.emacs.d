@@ -92,9 +92,9 @@
 
 (ecase system-type
   ('windows-nt
-   (set-default-font "Consolas-12"))
-   ('gnu/linux
-    (set-default-font "Inconsolata-12")))
+   (set-default-font "Consolas-11"))
+  ('gnu/linux
+   (set-default-font "Inconsolata-12")))
 
 (require 'whole-line-or-region)
 (whole-line-or-region-mode)
@@ -234,6 +234,12 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (if (equal system-type 'windows-nt)
     (setq markdown-command "perl ~/.emacs.d/Markdown.pl"))
+
+;; semantic
+(semantic-mode 1)
+(global-semantic-idle-summary-mode 1)
+(global-semantic-idle-completions-mode 1)
+(global-semantic-decoration-mode 1)
 
 ;; ecb
 (add-to-list 'load-path "~/.emacs.d/ecb/")
