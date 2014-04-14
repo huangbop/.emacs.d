@@ -92,7 +92,7 @@
 
 (ecase system-type
   ('windows-nt
-   (set-default-font "Consolas-11"))
+   (set-default-font "Consolas-12"))
   ('gnu/linux
    (set-default-font "Inconsolata-12")))
 
@@ -167,14 +167,14 @@
 (setq c-default-style "linux")
 
 ;; GUD
+(global-set-key (kbd "<f5>") 'gud-cont)
 (global-set-key (kbd "<f7>") 'gud-up)
-(global-set-key (kbd "<S-f7>") 'gud-down)
-(global-set-key (kbd "<f8>") 'gud-cont)
+(global-set-key (kbd "<f8>") 'gud-down)
 (global-set-key (kbd "<f9>") 'gud-break)
 (global-set-key (kbd "<M-f9>") 'gud-tbreak)
 (global-set-key (kbd "<S-f9>") 'gud-remove)
 (global-set-key (kbd "<f10>") 'gud-next)
-(global-set-key (kbd "<M-f10>") 'gud-until)
+(global-set-key (kbd "<C-f10>") 'gud-until)
 (global-set-key (kbd "<S-f10>") 'gud-finish)
 (global-set-key (kbd "<f11>") 'gud-step)
 (global-set-key (kbd "<f12>") 'gdb-many-windows)
@@ -221,10 +221,6 @@
   ('gnu/linux
    (setq inferior-lisp-program "/usr/bin/sbcl")))
 (setq slime-contribs '(slime-fancy))
-
-;; gas
-(require 'gas-mode)
-(add-to-list 'auto-mode-alist '("\\.S\\'" . gas-mode))
 
 ;; markdown
 (autoload 'markdown-mode "markdown-mode"
