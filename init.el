@@ -251,6 +251,9 @@
 (global-set-key (kbd "C-M-.") 'quick-jump-go-forward)
 (global-set-key (kbd "C-M-m") 'quick-jump-clear-all-marker)
 
+;; asm-mode comment for arm
+(setq asm-comment-char ?\@)
+
 ;; change inner
 (require 'change-inner)
 (global-set-key (kbd "M-i") 'change-inner)
