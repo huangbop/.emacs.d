@@ -248,4 +248,7 @@
 (global-set-key (kbd "C-M-.") 'quick-jump-go-forward)
 (global-set-key (kbd "C-M-m") 'quick-jump-clear-all-marker)
 
+;; asm-mode comment for arm
+(setq asm-comment-char ?\@)
+
 ;;; init.el ends here
