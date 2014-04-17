@@ -39,7 +39,6 @@
 (setq inhibit-startup-screen t)
 (setq inhibit-startup-echo-area-message t)
 
-(set-fringe-mode 0)
 (setq indicate-empty-lines t)
 
 (menu-bar-mode -1)
@@ -61,8 +60,8 @@
 (require 'dired+)
 
 ;; ido
-(ido-mode t)
-(ido-everywhere t)
+(ido-mode 1)
+(ido-everywhere 1)
 (setq ido-enable-flex-matching t)
 (setq ido-use-filename-at-point nil)
 (setq ido-auto-merge-work-directories-length 0)
@@ -70,6 +69,13 @@
 
 (require 'ido-ubiquitous)
 (ido-ubiquitous-mode t)
+
+(require 'ido-vertical-mode)
+(ido-vertical-mode 1)
+
+(require 'flx-ido)
+(flx-ido-mode 1)
+(setq ido-use-faces nil)
 
 ;; smex
 (require 'smex)
@@ -122,9 +128,6 @@
 
 (require 'move-text)
 (move-text-default-bindings)
-
-(require 'nlinum)
-(global-nlinum-mode)
 
 ;; jedi.el
 (require 'anything-config)
@@ -247,5 +250,10 @@
 (global-set-key (kbd "C-M-SPC") 'quick-jump-push-marker)
 (global-set-key (kbd "C-M-.") 'quick-jump-go-forward)
 (global-set-key (kbd "C-M-m") 'quick-jump-clear-all-marker)
+
+;; change inner
+(require 'change-inner)
+(global-set-key (kbd "M-i") 'change-inner)
+(global-set-key (kbd "M-o") 'change-outer)
 
 ;;; init.el ends here
