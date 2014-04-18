@@ -23,6 +23,7 @@
 (deftheme huangbop  "A dark color theme for Emacs based on Sublime Text 2")
 
 (let ((*background*         "#2e3436")
+      (*fringe-background*  "#212526")
       (*comments*           "#8C8C8C")
       (*constant*           "#FF80F4")
       (*current-line*       "#151515")
@@ -83,7 +84,7 @@
    `(font-lock-warning-face ((t (:foreground, *warning*))))
 
    ;; GUI
-   `(fringe ((t (:background, *background*))))
+   `(fringe ((t (:background, *fringe-background*))))
    `(linum ((t (:background, *line-number* :foreground, *line-fg*))))
    `(minibuffer-prompt ((t (:foreground, *variable*))))
    `(mode-line ((t (:background, *mode-line-bg* :foreground, *mode-line-fg*))))
