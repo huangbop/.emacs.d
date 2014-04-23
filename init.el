@@ -48,4 +48,8 @@
 (blink-cursor-mode -1)
 (column-number-mode)
 
+;; egg
+(package-install 'egg)
+(require 'egg)
+
 ;;; init.el ends here
