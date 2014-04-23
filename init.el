@@ -16,11 +16,15 @@
 		 smex
 		 egg
 		 ace-jump-mode
-		 alect-themes))
+		 alect-themes
+		 smartparens))
 
 (dolist (package packages)
   (unless (package-installed-p package)
     (package-install package)))
+
+;; theme
+(load-theme 'alect-light t)
 
 ;; ido 
 (ido-mode 1)
@@ -66,5 +70,8 @@
 ;; ace
 (require 'ace-jump-mode)
 (global-set-key (kbd "C-;") 'ace-jump-mode)
+
+;; smartparens
+
 
 ;;; init.el ends here
