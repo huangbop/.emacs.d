@@ -268,4 +268,15 @@
 ;; ag
 (require 'ag)
 
+;; enhanced ruby mode
+(add-to-list 'load-path "~/.emacs.d/enhanced-ruby-mode/") ; must be added after any path containing old ruby-mode
+(autoload 'enh-ruby-mode "enh-ruby-mode" "Major mode for ruby files" t)
+(add-to-list 'auto-mode-alist '("\\.rb$" . enh-ruby-mode))
+(add-to-list 'interpreter-mode-alist '("ruby" . enh-ruby-mode))
+
+(if (equal system-type 'windows-nt)
+    (setq enh-ruby-program "D:/Ruby193/bin/ruby")) ; so that still works if ruby points to ruby1.8
+
+(remove-hook 'enh-ruby-mode-hook 'erm-define-faces)
+
 ;;; init.el ends here
