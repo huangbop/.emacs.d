@@ -1,7 +1,6 @@
-;;; Huang Bo's emacs configuration
-;;; https://github.com/huangbop/.emacs.d
+;;; Huang Bo - https://github.com/huangbop/.emacs.d
 
-;; elpa
+;; packages
 (require 'package)
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -11,24 +10,31 @@
 (unless (file-exists-p "~/.emacs.d/elpa/archives/melpa")
   (package-refresh-contents))
 
+(setq packages '(ido-vertical-mode
+		 flx-ido
+		 window-numbering
+		 smex
+		 egg
+		 ace-jump-mode
+		 alect-themes))
+
+(dolist (package packages)
+  (unless (package-installed-p package)
+    (package-install package)))
+
 ;; ido 
 (ido-mode 1)
-
-(package-install 'ido-vertical-mode)
 (require 'ido-vertical-mode)
 (ido-vertical-mode 1)
 
-(package-install 'flx-ido)
 (require 'flx-ido)
 (flx-ido-mode 1)
 
 ;; window numbering
-(package-install 'window-numbering)
 (require 'window-numbering)
 (window-numbering-mode 1)
 
 ;; smex
-(package-install 'smex)
 (require 'smex)
 (global-set-key (kbd "M-x") 'smex)
 
@@ -49,7 +55,16 @@
 (column-number-mode)
 
 ;; egg
-(package-install 'egg)
 (require 'egg)
+(setq egg-buffer-hide-help-on-start
+      '(egg-status-buffer-mode
+	egg-log-buffer-mode
+	egg-file-log-buffer-mode
+	egg-diff-buffer-mode
+	egg-commit-buffer-mode))
+
+;; ace
+(require 'ace-jump-mode)
+(global-set-key (kbd "C-;") 'ace-jump-mode)
 
 ;;; init.el ends here
