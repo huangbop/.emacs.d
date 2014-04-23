@@ -279,4 +279,7 @@
 
 (remove-hook 'enh-ruby-mode-hook 'erm-define-faces)
 
+;; rainbow mode
+(require 'rainbow-mode)
+
 ;;; init.el ends here
