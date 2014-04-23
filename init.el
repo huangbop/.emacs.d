@@ -265,4 +265,7 @@
 	  '(lambda ()
 	     (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
+;; ag
+(require 'ag)
+
 ;;; init.el ends here
