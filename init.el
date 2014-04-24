@@ -24,7 +24,8 @@
 		 smartparens
 		 expand-region
 		 centered-cursor-mode
-		 multiple-cursors))
+		 multiple-cursors
+		 auto-complete))
 
 (dolist (package packages)
   (unless (package-installed-p package)
@@ -42,7 +43,8 @@
       ido-auto-merge-work-directories-length -1
       ido-create-new-buffer 'always
       ido-use-filename-at-point nil
-      ido-max-prospects 10)
+      ido-max-prospects 10
+      ido-use-virtual-buffers t)
 
 (require 'ido-ubiquitous)
 (ido-ubiquitous-mode 1)
@@ -56,6 +58,9 @@
 ;; window numbering
 (require 'window-numbering)
 (window-numbering-mode 1)
+
+;; winner
+(winner-mode 1)
 
 ;; smex
 (require 'smex)
@@ -80,6 +85,11 @@
 (column-number-mode)
 
 (set-default-font "Courier New-11")
+
+(defun yank-pop-forward (arg)
+  (interactive "p")
+  (yank-pop (- arg)))
+(global-set-key (kbd "M-Y") 'yank-pop-forward)
 
 ;; egg
 (require 'egg)
@@ -113,5 +123,11 @@
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-S-m") 'mc/skip-to-previous-like-this)
 (global-set-key (kbd "C-?") 'mc/skip-to-next-like-this )
+
+;; auto complete
+(require 'auto-complete-config)
+(ac-config-default)
+(setq ac-auto-start nil)
+(ac-set-trigger-key "TAB")
 
 ;;; init.el ends here
