@@ -21,7 +21,10 @@
 		 smex
 		 egg
 		 ace-jump-mode
-		 smartparens))
+		 smartparens
+		 expand-region
+		 centered-cursor-mode
+		 multiple-cursors))
 
 (dolist (package packages)
   (unless (package-installed-p package)
@@ -70,9 +73,13 @@
 (when (fboundp 'set-scroll-bar-mode)
   (set-scroll-bar-mode nil))
 
+(set-fringe-mode -1)
+
 ;; edit basis
 (blink-cursor-mode -1)
 (column-number-mode)
+
+(set-default-font "Courier New-11")
 
 ;; egg
 (require 'egg)
@@ -89,5 +96,22 @@
 
 ;; smartparens
 (require 'setup-smartparens)
+
+;; expand region
+(require 'expand-region)
+(global-set-key (kbd "C-0") 'er/expand-region)
+(global-set-key (kbd "C-9") 'er/contract-region)
+
+;; centered cursor
+(require 'centered-cursor-mode)
+(global-centered-cursor-mode 1)
+
+;; multiple cursors
+(require 'multiple-cursors)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-S-m") 'mc/skip-to-previous-like-this)
+(global-set-key (kbd "C-?") 'mc/skip-to-next-like-this )
 
 ;;; init.el ends here
