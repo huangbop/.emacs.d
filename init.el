@@ -17,7 +17,8 @@
 		 centered-cursor-mode
 		 multiple-cursors
 		 auto-complete
-		 dired+))
+		 dired+
+		 buffer-move))
 (require 'setup-packages)
 (install-packages packages)
 
