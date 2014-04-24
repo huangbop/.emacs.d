@@ -1,5 +1,8 @@
 ;;; Huang Bo - https://github.com/huangbop/.emacs.d
 
+;; path
+(add-to-list 'load-path user-emacs-directory)
+
 ;; packages
 (require 'package)
 
@@ -10,13 +13,14 @@
 (unless (file-exists-p "~/.emacs.d/elpa/archives/melpa")
   (package-refresh-contents))
 
-(setq packages '(ido-vertical-mode
+(setq packages '(monokai-theme
+		 ido-ubiquitous
+		 ido-vertical-mode
 		 flx-ido
 		 window-numbering
 		 smex
 		 egg
 		 ace-jump-mode
-		 alect-themes
 		 smartparens))
 
 (dolist (package packages)
@@ -24,10 +28,22 @@
     (package-install package)))
 
 ;; theme
-(load-theme 'alect-light t)
+(load-theme 'monokai t)
 
 ;; ido 
 (ido-mode 1)
+(ido-everywhere 1)
+(setq ido-enable-prefix nil
+      ido-enable-flex-matching t
+      ido-case-fold nil
+      ido-auto-merge-work-directories-length -1
+      ido-create-new-buffer 'always
+      ido-use-filename-at-point nil
+      ido-max-prospects 10)
+
+(require 'ido-ubiquitous)
+(ido-ubiquitous-mode 1)
+
 (require 'ido-vertical-mode)
 (ido-vertical-mode 1)
 
@@ -72,6 +88,6 @@
 (global-set-key (kbd "C-;") 'ace-jump-mode)
 
 ;; smartparens
-
+(require 'setup-smartparens)
 
 ;;; init.el ends here
