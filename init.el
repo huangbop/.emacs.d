@@ -18,7 +18,8 @@
 		 multiple-cursors
 		 auto-complete
 		 dired+
-		 buffer-move))
+		 buffer-move
+		 yasnippet))
 (require 'setup-packages)
 (install-packages packages)
 

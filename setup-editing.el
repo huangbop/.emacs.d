@@ -34,6 +34,10 @@
 (setq ac-auto-start nil)
 (ac-set-trigger-key "TAB")
 
+;; yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)
+
 (provide 'setup-editing)
 
 ;;; setup-editing ends here
