@@ -19,7 +19,8 @@
 		 auto-complete
 		 dired+
 		 buffer-move
-		 yasnippet))
+		 yasnippet
+		 slime))
 (require 'setup-packages)
 (install-packages packages)
 
@@ -37,6 +38,9 @@
 
 ;; utilities
 (require 'setup-utilities)
+
+;; lisp
+(require 'setup-lisp)
 
 ;; egg
 (require 'egg)
