@@ -35,6 +35,9 @@
 ;; editing
 (require 'setup-editing)
 
+;; utilities
+(require 'setup-utilities)
+
 ;; egg
 (require 'egg)
 (setq egg-buffer-hide-help-on-start
