@@ -20,7 +20,8 @@
 		 dired+
 		 buffer-move
 		 yasnippet
-		 slime))
+		 slime
+		 whole-line-or-region))
 (require 'setup-packages)
 (install-packages packages)
 

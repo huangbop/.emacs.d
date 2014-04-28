@@ -38,6 +38,10 @@
 (require 'yasnippet)
 (yas-global-mode 1)
 
+;; whole line or region
+(require 'whole-line-or-region)
+(whole-line-or-region-mode 1)
+
 (provide 'setup-editing)
 
 ;;; setup-editing ends here
