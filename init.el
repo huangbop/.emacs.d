@@ -42,6 +42,9 @@
 ;; lisp
 (require 'setup-lisp)
 
+;; c
+(require 'setup-c)
+
 ;; egg
 (require 'egg)
 (setq egg-buffer-hide-help-on-start
