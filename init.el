@@ -8,7 +8,6 @@
 		 ido-ubiquitous
 		 ido-vertical-mode
 		 flx-ido
-		 window-numbering
 		 smex
 		 egg
 		 ace-jump-mode
