@@ -2,5 +2,6 @@
 auto-save-list/
 ac-comphist.dat
 elpa/
+.mc-lists.el
 
 *~

@@ -19,7 +19,7 @@
 (blink-cursor-mode -1)
 (column-number-mode)
 
-(set-default-font "Courier New-11")
+(set-default-font "Consolas-11")
 
 (provide 'setup-appearance)
 
