@@ -15,6 +15,10 @@
 (global-set-key (kbd "<M-S-left>")   'buf-move-left)
 (global-set-key (kbd "<M-S-right>")  'buf-move-right)
 
+;; buffer circle
+(global-set-key (kbd "C-M-,") 'previous-buffer)
+(global-set-key (kbd "C-M-.") 'next-buffer)
+
 (provide 'setup-buffering)
 
 ;;; setup-buffering ends here
