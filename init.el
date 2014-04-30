@@ -20,7 +20,8 @@
 		 buffer-move
 		 yasnippet
 		 slime
-		 whole-line-or-region))
+		 whole-line-or-region
+		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
 
