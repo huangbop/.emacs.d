@@ -28,6 +28,9 @@
 (global-set-key (kbd "<f11>") 'gud-step)
 (global-set-key (kbd "<f12>") 'gdb-many-windows)
 
+;; c style
+(setq c-default-style "linux")
+
 (provide 'setup-c)
 
 ;;; setup-c.el ends here
