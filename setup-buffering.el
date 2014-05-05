@@ -19,6 +19,12 @@
 (global-set-key (kbd "C-M-,") 'previous-buffer)
 (global-set-key (kbd "C-M-.") 'next-buffer)
 
+;; adjust window
+(global-set-key (kbd "C-S-<left>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-S-<right>") 'shrink-window-horizontally)
+(global-set-key (kbd "C-S-<down>") 'shrink-window)
+(global-set-key (kbd "C-S-<up>") 'enlarge-window)
+
 (provide 'setup-buffering)
 
 ;;; setup-buffering ends here
