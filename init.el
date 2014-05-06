@@ -21,6 +21,7 @@
 		 yasnippet
 		 slime
 		 whole-line-or-region
+		 move-text
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)

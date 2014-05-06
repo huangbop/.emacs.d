@@ -42,6 +42,10 @@
 (require 'whole-line-or-region)
 (whole-line-or-region-mode 1)
 
+;; move text
+(require 'move-text)
+(move-text-default-bindings)
+
 (provide 'setup-editing)
 
 ;;; setup-editing ends here
