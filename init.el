@@ -22,6 +22,7 @@
 		 slime
 		 whole-line-or-region
 		 move-text
+		 markdown-mode
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
@@ -46,6 +47,9 @@
 
 ;; c
 (require 'setup-c)
+
+;; mark
+(require 'setup-mark)
 
 ;; egg
 (require 'egg)
