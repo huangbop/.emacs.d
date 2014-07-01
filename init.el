@@ -23,6 +23,8 @@
 		 whole-line-or-region
 		 move-text
 		 markdown-mode
+		 jedi
+		 jedi-direx
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
@@ -47,6 +49,9 @@
 
 ;; c
 (require 'setup-c)
+
+;; python
+(require 'setup-python)
 
 ;; mark
 (require 'setup-mark)
