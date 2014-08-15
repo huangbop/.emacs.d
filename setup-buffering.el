@@ -19,6 +19,10 @@
 (global-set-key (kbd "C-M-,") 'previous-buffer)
 (global-set-key (kbd "C-M-.") 'next-buffer)
 
+;; register jump
+(global-set-key (kbd "M-S-SPC") 'point-to-register)
+(global-set-key (kbd "M-J") 'jump-to-register)
+
 ;; adjust window
 (global-set-key (kbd "C-S-<left>") 'enlarge-window-horizontally)
 (global-set-key (kbd "C-S-<right>") 'shrink-window-horizontally)
