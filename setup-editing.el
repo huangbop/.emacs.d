@@ -1,4 +1,5 @@
 
+
 (defun yank-pop-forward (arg)
   (interactive "p")
   (yank-pop (- arg)))
@@ -17,11 +18,6 @@
 			 (define-key hide-ifdef-mode-map (kbd "M-(") 'hide-ifdef-block)
 			 (define-key hide-ifdef-mode-map (kbd "M-)") 'show-ifdef-block)))
 
-;; hideshow
-(add-hook 'c-mode-hook (lambda () 
-			 (hs-minor-mode 1)
-			 (define-key hs-minor-mode-map (kbd "C-h") 'hs-toggle-hiding)))
-			 
 ;; expand region
 (require 'expand-region)
 (global-set-key (kbd "C-0") 'er/expand-region)
