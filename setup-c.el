@@ -13,7 +13,6 @@
 ;; semantic
 (semantic-mode 1)
 (global-semantic-idle-summary-mode 1)
-(global-semantic-idle-completions-mode 1)
 
 ;; gud
 (global-set-key (kbd "<f5>") 'gud-cont)
