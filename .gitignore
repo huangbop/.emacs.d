@@ -4,5 +4,6 @@ ac-comphist.dat
 elpa/
 .mc-lists.el
 semanticdb/
+bookmarks
 
 *~
