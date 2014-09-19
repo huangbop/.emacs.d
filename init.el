@@ -25,6 +25,7 @@
 		 markdown-mode
 		 jedi
 		 jedi-direx
+		 ascii
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)

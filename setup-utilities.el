@@ -7,6 +7,9 @@
 					 'fullboth)))
 (global-set-key [(meta return)] 'toggle-fullscreen)
 
+;; ascii
+(require 'ascii)
+
 (provide 'setup-utilities)
 
 ;;; setup-utilities.el ends here
