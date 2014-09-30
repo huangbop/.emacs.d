@@ -26,6 +26,7 @@
 		 jedi
 		 jedi-direx
 		 ascii
+		 jump-char
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
