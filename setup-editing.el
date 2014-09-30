@@ -53,6 +53,10 @@
 (require 'move-text)
 (move-text-default-bindings)
 
+;; toggle quotes
+(require 'toggle-quotes)
+(global-set-key (kbd "C-'") 'toggle-quotes)
+
 (provide 'setup-editing)
 
 ;;; setup-editing ends here

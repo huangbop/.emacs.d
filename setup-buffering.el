@@ -31,6 +31,7 @@
 (global-set-key (kbd "C-S-<up>") 'enlarge-window)
 
 ;; jump char
+(require 'jump-char)
 (global-set-key (kbd "M-m") 'jump-char-forward)
 (global-set-key (kbd "M-M") 'jump-char-backward)
 
