@@ -27,6 +27,14 @@
 (require 'aok)
 (global-set-key (kbd "M-s a") 'all-occur)
 
+;; zap
+(autoload 'zap-up-to-char "misc"
+  'interactive)
+(global-set-key (kbd "M-z") 'zap-up-to-char)
+
+(require 'ace-jump-zap)
+(global-set-key (kbd "M-:") 'ace-jump-zap-up-to-char)
+
 (provide 'setup-utilities)
 
 ;;; setup-utilities.el ends here

@@ -31,6 +31,7 @@
 		 ioccur
 		 aok
 		 wgrep
+		 ace-jump-zap
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
