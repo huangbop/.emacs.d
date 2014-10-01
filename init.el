@@ -30,6 +30,7 @@
 		 toggle-quotes
 		 ioccur
 		 aok
+		 wgrep
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)

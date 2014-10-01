@@ -18,6 +18,7 @@
 
 ;; grep
 (global-set-key (kbd "M-s g") 'grep)
+(require 'wgrep)
 
 ;; occur
 (add-hook 'occur-mode-hook 'next-error-follow-minor-mode)
