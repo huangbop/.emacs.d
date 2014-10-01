@@ -32,8 +32,8 @@
 
 ;; jump char
 (require 'jump-char)
-(global-set-key (kbd "M-m") 'jump-char-forward)
-(global-set-key (kbd "M-M") 'jump-char-backward)
+(global-set-key (kbd "M-o") 'jump-char-forward)
+(global-set-key (kbd "M-O") 'jump-char-backward)
 
 ;; toggle split
 (defun toggle-window-split ()
