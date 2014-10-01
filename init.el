@@ -28,6 +28,8 @@
 		 ascii
 		 jump-char
 		 toggle-quotes
+		 ioccur
+		 aok
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
