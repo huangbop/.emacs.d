@@ -35,6 +35,13 @@
 (require 'ace-jump-zap)
 (global-set-key (kbd "M-:") 'ace-jump-zap-up-to-char)
 
+;; webjump
+(require 'webjump)
+(global-set-key (kbd "C-c w") 'webjump)
+(setq webjump-sites
+      (append '(("Huang Bo" . "www.huangbop.com"))
+	      webjump-sample-sites))
+
 (provide 'setup-utilities)
 
 ;;; setup-utilities.el ends here
