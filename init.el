@@ -32,6 +32,8 @@
 		 aok
 		 wgrep
 		 ace-jump-zap
+		 adjust-parens
+		 occur-x
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)

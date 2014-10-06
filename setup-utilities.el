@@ -26,6 +26,8 @@
 (global-set-key (kbd "M-s i") 'ioccur)
 (require 'aok)
 (global-set-key (kbd "M-s a") 'all-occur)
+(require 'occur-x)
+(add-hook 'occur-mode-hook 'turn-on-occur-x-mode)
 
 ;; zap
 (autoload 'zap-up-to-char "misc"
