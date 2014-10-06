@@ -66,6 +66,9 @@
 
 (global-set-key (kbd "C-x -") 'toggle-window-split)
 
+;; dired jump
+(global-set-key (kbd "C-x j") 'dired-jump)
+
 (provide 'setup-buffering)
 
 ;;; setup-buffering ends here
