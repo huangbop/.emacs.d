@@ -34,6 +34,7 @@
 		 ace-jump-zap
 		 adjust-parens
 		 occur-x
+		 change-inner
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)

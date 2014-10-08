@@ -57,6 +57,13 @@
 (require 'toggle-quotes)
 (global-set-key (kbd "C-'") 'toggle-quotes)
 
+;; change inner
+(require 'change-inner)
+(global-set-key (kbd "M-I") 'copy-inner)
+(global-set-key (kbd "M-O") 'copy-outer)
+(global-set-key (kbd "M-i") 'change-inner)
+(global-set-key (kbd "M-o") 'change-outer)
+
 (provide 'setup-editing)
 
 ;;; setup-editing ends here
