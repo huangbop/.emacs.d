@@ -35,7 +35,7 @@
 (global-set-key (kbd "M-z") 'zap-up-to-char)
 
 (require 'ace-jump-zap)
-(global-set-key (kbd "C-:") 'ace-jump-zap-up-to-char)
+(global-set-key (kbd "M-:") 'ace-jump-zap-up-to-char)
 
 ;; webjump
 (require 'webjump)
