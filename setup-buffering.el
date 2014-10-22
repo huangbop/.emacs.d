@@ -66,6 +66,13 @@
 ;; dired jump
 (global-set-key (kbd "C-x j") 'dired-jump)
 
+;; back button
+(require 'visible-mark)
+(global-visible-mark-mode 1)
+
+(require 'back-button)
+(back-button-mode 1)
+
 (provide 'setup-buffering)
 
 ;;; setup-buffering ends here

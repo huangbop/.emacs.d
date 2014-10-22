@@ -35,6 +35,8 @@
 		 adjust-parens
 		 occur-x
 		 change-inner
+		 visible-mark
+		 back-button
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
