@@ -7,3 +7,4 @@ semanticdb/
 bookmarks
 *~
 *.cache
+var/
