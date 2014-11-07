@@ -67,7 +67,7 @@
 ;; change inner
 (require 'change-inner)
 (global-set-key (kbd "M-i") 'change-inner)
-(global-set-key (kbd "M-I") 'copy-inner)
+(global-set-key (kbd "M-I") 'change-outer)
 
 (provide 'setup-editing)
 
