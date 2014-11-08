@@ -32,11 +32,12 @@
 		 aok
 		 wgrep
 		 ace-jump-zap
-		 adjust-parens
 		 occur-x
 		 change-inner
 		 visible-mark
 		 back-button
+		 paredit
+		 paredit-menu
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
