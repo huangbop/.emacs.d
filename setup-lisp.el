@@ -12,6 +12,9 @@
 (require 'paredit)
 (require 'paredit-menu)
 (add-hook 'lisp-mode-hook 'enable-paredit-mode)
+(eval-after-load 'paredit
+  '(progn
+     (define-key paredit-mode-map (kbd "M-J") 'bookmark-jump)))
 
 (provide 'setup-lisp)
 
