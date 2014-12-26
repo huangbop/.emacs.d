@@ -8,3 +8,6 @@ bookmarks
 *~
 *.cache
 var/
+.python-environments/
+eshell/
+Untitled*

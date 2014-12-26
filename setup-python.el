@@ -1,6 +1,5 @@
 
-
-;; jedi
+;;; jedi
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t
       jedi:use-shortcuts t)
@@ -9,7 +8,7 @@
   '(define-key python-mode-map "\C-cx" 'jedi-direx:pop-to-buffer))
 (add-hook 'jedi-mode-hook 'jedi-direx:setup)
 
-;; use ipython
+;;; ipython
 (setq
  python-shell-interpreter "ipython"
  python-shell-interpreter-args ""
@@ -21,11 +20,6 @@
  "';'.join(module_completion('''%s'''))\n"
  python-shell-completion-string-code
  "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
-
-(if (equal system-type 'windows-nt)
-    (setq
-     python-shell-interpreter "python"
-     python-shell-interpreter-args "-i d:/Python27/Scripts/ipython-script.py"))
 
 
 (provide 'setup-python)
