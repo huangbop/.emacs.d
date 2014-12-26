@@ -21,5 +21,8 @@
  python-shell-completion-string-code
  "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
 
+;;; debug
+(setq gud-pdb-command-name "python -m pdb")
+
 
 (provide 'setup-python)
