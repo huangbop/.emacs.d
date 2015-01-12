@@ -38,6 +38,7 @@
 		 back-button
 		 paredit
 		 paredit-menu
+		 tagedit
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
@@ -68,5 +69,8 @@
 
 ;; mark
 (require 'setup-mark)
+
+;; html
+(require 'setup-html)
 
 ;;; init.el ends here
