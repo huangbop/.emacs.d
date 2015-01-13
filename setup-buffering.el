@@ -19,11 +19,6 @@
 (global-set-key (kbd "C-M-,") 'previous-buffer)
 (global-set-key (kbd "C-M-.") 'next-buffer)
 
-;;; bookmark jump
-(global-set-key (kbd "C-M-SPC") 'bookmark-set)
-(global-set-key (kbd "C-M-j") 'bookmark-jump)
-(global-set-key (kbd "C-M-l") 'bookmark-bmenu-list)
-
 ;; adjust window
 (global-set-key (kbd "C-S-<left>") 'enlarge-window-horizontally)
 (global-set-key (kbd "C-S-<right>") 'shrink-window-horizontally)
