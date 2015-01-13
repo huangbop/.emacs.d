@@ -39,6 +39,7 @@
 		 paredit
 		 paredit-menu
 		 tagedit
+		 zencoding-mode
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
