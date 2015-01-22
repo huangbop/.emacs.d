@@ -65,6 +65,11 @@
 (require 'toggle-quotes)
 (global-set-key (kbd "C-'") 'toggle-quotes)
 
+;;; wgrep
+(require 'wgrep)
+(setq wgrep-auto-save-buffer t)	 ; Save buffers when wgrep-finish-edit
+(setq wgrep-enable-key "w")
+
 
 (provide 'setup-editing)
 
