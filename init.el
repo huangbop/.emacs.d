@@ -68,6 +68,9 @@
 ;; python
 (require 'setup-python)
 
+;; java
+(require 'setup-java)
+
 ;; mark
 (require 'setup-mark)
 
