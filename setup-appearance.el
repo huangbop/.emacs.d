@@ -2,6 +2,8 @@
 ;; theme
 (load-theme 'monokai t)
 
+(global-hl-line-mode 1)
+
 ;; frame basis
 (setq use-file-dialog nil)
 (setq use-dialog-box nil)
