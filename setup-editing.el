@@ -9,6 +9,11 @@
 (require 'ace-jump-mode)
 (global-set-key (kbd "C-;") 'ace-jump-mode)
 
+;; change inner
+(require 'change-inner)
+(global-set-key (kbd "M-i") 'change-inner)
+(global-set-key (kbd "M-I") 'copy-inner)
+
 ;; smartparens
 (require 'setup-smartparens)
 
