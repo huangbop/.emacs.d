@@ -2,6 +2,7 @@
 
 ;; load path
 (add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path "~/.emacs.d/hb")
 
 ;; packages
 (setq packages '(monokai-theme
