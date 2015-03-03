@@ -1,3 +1,4 @@
+(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 
 ;; slime
 (require 'slime-autoloads)
@@ -25,6 +26,7 @@
 
 (local-set-key (kbd "TAB") 'lisp-indent-adjust-parens)
 (local-set-key (kbd "<backtab>") 'lisp-dedent-adjust-parens)
+
 
 
 (provide 'setup-lisp)

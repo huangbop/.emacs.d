@@ -121,6 +121,10 @@
   ""
   (hgrep-setup-internal))
 
+(defun hgrep-setup-internal ()
+  (setq hgrep-original-mode-map (current-local-map))
+  (define-key hgrep-original-mode-map
+    hgrep-enable-key 'hgrep-change-to-hgrep-mode))
 
 
 
