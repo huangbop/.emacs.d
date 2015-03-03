@@ -211,6 +211,7 @@ End of this match equals start of file contents.
 (defvar wgrep-inhibit-modification-hook nil)
 
 (defvar wgrep-mode-map nil)
+
 (unless wgrep-mode-map
   (let ((map (make-sparse-keymap)))
 
