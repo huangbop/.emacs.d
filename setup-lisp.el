@@ -27,6 +27,7 @@
 (local-set-key (kbd "TAB") 'lisp-indent-adjust-parens)
 (local-set-key (kbd "<backtab>") 'lisp-dedent-adjust-parens)
 
+(define-key emacs-lisp-mode-map (kbd "<f1>") 'adjust-parens-mode)
 
 
 (provide 'setup-lisp)
