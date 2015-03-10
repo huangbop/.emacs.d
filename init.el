@@ -46,37 +46,21 @@
 (require 'setup-packages)
 (install-packages packages)
 
-;; appearance
-(require 'setup-appearance)
+;;; modules
+(defvar modules '(setup-appearance
+		  setup-ido
+		  setup-buffering
+		  setup-editing
+		  setup-utilities
+		  setup-lisp
+		  setup-c
+		  setup-python
+		  setup-java
+		  setup-mark
+		  setup-html))
 
-;; ido
-(require 'setup-ido)
+(dolist (mod modules)
+  (require mod))
 
-;; buffering
-(require 'setup-buffering)
-
-;; editing
-(require 'setup-editing)
-
-;; utilities
-(require 'setup-utilities)
-
-;; lisp
-(require 'setup-lisp)
-
-;; c
-(require 'setup-c)
-
-;; python
-(require 'setup-python)
-
-;; java
-(require 'setup-java)
-
-;; mark
-(require 'setup-mark)
-
-;; html
-(require 'setup-html)
 
 ;;; init.el ends here
