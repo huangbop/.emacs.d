@@ -22,12 +22,13 @@
 ;;; adjust parens
 (require 'adjust-parens)
 (add-hook 'emacs-lisp-mode-hook #'adjust-parens-mode)
-(add-hook 'clojure-mode-hook #'adjust-parens-mode)
+(add-hook 'lisp-mode-hook #'adjust-parens-mode)
 
 (local-set-key (kbd "TAB") 'lisp-indent-adjust-parens)
 (local-set-key (kbd "<backtab>") 'lisp-dedent-adjust-parens)
 
 (define-key emacs-lisp-mode-map (kbd "<f1>") 'adjust-parens-mode)
+(define-key lisp-mode-map (kbd "<f1>") 'adjust-parens-mode)
 
 
 (provide 'setup-lisp)
