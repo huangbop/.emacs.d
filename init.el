@@ -42,15 +42,16 @@
 		 tagedit
 		 zencoding-mode
 		 adjust-parens
+		 evil
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
 
 ;;; modules
 (defvar modules '(setup-appearance
+		  setup-editing
 		  setup-ido
 		  setup-buffering
-		  setup-editing
 		  setup-utilities
 		  setup-lisp
 		  setup-c

@@ -1,4 +1,4 @@
-
+(global-set-key (kbd "<f1>") 'evil-mode)
 
 (defun yank-pop-forward (arg)
   (interactive "p")
