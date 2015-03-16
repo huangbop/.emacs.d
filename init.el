@@ -43,6 +43,7 @@
 		 zencoding-mode
 		 adjust-parens
 		 evil
+                 cider
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
