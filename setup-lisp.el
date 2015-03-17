@@ -10,20 +10,22 @@
 ;;; Emacs lisp
 (add-hook 'emacs-lisp-mode-hook
 	  (lambda ()
-	    'turn-on-eldoc-mode
-	    'enable-paredit-mode
-	    'adjust-parens-mode
-	    (define-key emacs-lisp-mode-map (kbd "<f1>") 'adjust-parens-mode)))
+	    (turn-on-eldoc-mode)
+	    (enable-paredit-mode)
+	    (adjust-parens-mode)))
 
 ;;; Clojure
+(require 'cider)
+(add-hook 'cider-mode-hook #'eldoc-mode)
+(setq nrepl-log-messages t
+      nrepl-hide-special-buffers t)
+
 (add-hook 'clojure-mode-hook
 	  (lambda ()
-	    'enable-paredit-mode
-	    'adjust-parens-mode
-	    (cider-mode)
-	    (define-key clojure-mode-map (kbd "<f1>") 'adjust-parens-mode)))
+	    (enable-paredit-mode)
+	    (adjust-parens-mode)
+	    (cider-mode)))
 
 
 (provide 'setup-lisp)
-
 ;;; setup-lisp ends here

@@ -44,6 +44,7 @@
 		 adjust-parens
 		 evil
                  cider
+		 company
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)

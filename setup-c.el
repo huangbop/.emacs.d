@@ -1,4 +1,15 @@
+(setq c-default-style "linux")
 
+;; hideif
+(add-hook 'c-mode-hook
+	  (lambda () (hide-ifdef-mode 1)
+	    (define-key hide-ifdef-mode-map (kbd "M-(") 'hide-ifdef-block)
+	    (define-key hide-ifdef-mode-map (kbd "M-)") 'show-ifdef-block)
+	    ;; hideshow
+	    (hs-minor-mode 1)
+	    (define-key hs-minor-mode-map (kbd "C-h") 'hs-toggle-hiding)
+	    (define-key hs-minor-mode-map (kbd "C-c 9") 'hs-hide-all)
+	    (define-key hs-minor-mode-map (kbd "C-c 0") 'hs-show-all)))
 
 ;; cscope
 (require 'xcscope)
@@ -27,9 +38,6 @@
 (global-set-key (kbd "<S-f11>") 'gud-finish)
 (global-set-key (kbd "<f12>") 'gdb-many-windows)
 
-;; c style
-(setq c-default-style "linux")
 
 (provide 'setup-c)
-
 ;;; setup-c.el ends here

@@ -1,5 +1,10 @@
 (global-set-key (kbd "<f1>") 'evil-mode)
 
+;; Company
+(require 'company)
+(global-company-mode)
+
+;; Yank
 (defun yank-pop-forward (arg)
   (interactive "p")
   (yank-pop (- arg)))
@@ -21,19 +26,6 @@
 ;; smartparens
 (require 'setup-smartparens)
 
-;; hideif
-(add-hook 'c-mode-hook (lambda () 
-			 (hide-ifdef-mode 1)
-			 (define-key hide-ifdef-mode-map (kbd "M-(") 'hide-ifdef-block)
-			 (define-key hide-ifdef-mode-map (kbd "M-)") 'show-ifdef-block)))
-
-;; hideshow
-(add-hook 'c-mode-hook (lambda () 
-			 (hs-minor-mode 1)
-			 (define-key hs-minor-mode-map (kbd "C-h") 'hs-toggle-hiding)
-			 (define-key hs-minor-mode-map (kbd "C-c 9") 'hs-hide-all)
-			 (define-key hs-minor-mode-map (kbd "C-c 0") 'hs-show-all)))
-
 ;; expand region
 (require 'expand-region)
 (global-set-key (kbd "C-0") 'er/expand-region)
@@ -50,12 +42,6 @@
 (global-set-key (kbd "C-c C->") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-S-m") 'mc/skip-to-previous-like-this)
 (global-set-key (kbd "C-?") 'mc/skip-to-next-like-this )
-
-;; auto complete
-(require 'auto-complete-config)
-(ac-config-default)
-(setq ac-auto-start nil)
-(ac-set-trigger-key "TAB")
 
 ;; yasnippet
 (require 'yasnippet)
@@ -81,5 +67,4 @@
 
 
 (provide 'setup-editing)
-
 ;;; setup-editing ends here
