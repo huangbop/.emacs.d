@@ -43,7 +43,8 @@
 		 zencoding-mode
 		 adjust-parens
 		 evil
-                 cider
+		 clojure-mode
+		 cider
 		 company
 		 rainbow-delimiters
 		 window-numbering))
