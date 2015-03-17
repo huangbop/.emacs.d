@@ -25,12 +25,20 @@
 
 (add-hook 'clojure-mode-hook
 	  (lambda ()
-	    (rainbow-delimiters-mode)
 	    (subword-mode)
 	    (turn-on-eldoc-mode)
 	    (enable-paredit-mode)
 	    (adjust-parens-mode)
-	    (cider-mode)))
+	    (cider-mode)
+	    (rainbow-delimiters-mode)))
+
+(add-hook 'cider-repl-mode-hook
+	  (lambda ()
+	    (subword-mode)
+	    (turn-on-eldoc-mode)
+	    (enable-paredit-mode)
+	    (adjust-parens-mode)
+	    (rainbow-delimiters-mode)))
 
 
 (provide 'setup-lisp)
