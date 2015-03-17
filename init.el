@@ -45,6 +45,7 @@
 		 evil
                  cider
 		 company
+		 rainbow-delimiters
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
