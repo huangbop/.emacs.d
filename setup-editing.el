@@ -5,6 +5,10 @@
   (yank-pop (- arg)))
 (global-set-key (kbd "M-Y") 'yank-pop-forward)
 
+;;; Set backup files directory
+(setq backup-directory-alist
+      '(("." . "~/.backups")))
+
 ;; ace
 (require 'ace-jump-mode)
 (global-set-key (kbd "C-;") 'ace-jump-mode)
