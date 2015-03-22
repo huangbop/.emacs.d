@@ -5,6 +5,10 @@
 (require 'window-numbering)
 (window-numbering-mode 1)
 
+;;; golden ratio
+(require 'golden-ratio)
+(global-set-key (kbd "<C-f12>") 'golden-ratio-mode)
+
 ;; winner
 (winner-mode 1)
 

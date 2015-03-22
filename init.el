@@ -49,6 +49,7 @@
 		 rainbow-delimiters
 		 js3-mode
 		 js-comint
+		 golden-ratio
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
