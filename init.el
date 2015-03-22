@@ -47,6 +47,8 @@
 		 cider
 		 company
 		 rainbow-delimiters
+		 js3-mode
+		 js-comint
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
@@ -62,6 +64,7 @@
 		  setup-python
 		  setup-java
 		  setup-mark
+		  setup-javascript
 		  setup-html))
 
 (dolist (mod modules)
