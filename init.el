@@ -47,7 +47,7 @@
 		 cider
 		 company
 		 rainbow-delimiters
-		 js3-mode
+		 js2-mode
 		 js-comint
 		 golden-ratio
 		 window-numbering))
