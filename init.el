@@ -54,6 +54,11 @@
 		 web-beautify
 		 tern
 		 company-tern
+		 flycheck-clojure
+		 let-alist
+		 hl-sexp
+		 clj-refactor
+		 flycheck-pos-tip
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
