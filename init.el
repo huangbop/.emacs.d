@@ -51,6 +51,7 @@
 		 js-comint
 		 golden-ratio
 		 flycheck
+		 web-beautify
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
