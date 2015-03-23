@@ -26,6 +26,11 @@
 (eval-after-load 'css-mode
   '(define-key css-mode-map (kbd "C-c b") 'web-beautify-css))
 
+;;; tern
+(require 'tern)
+(setq tern-command (cons (executable-find "tern") '()))
+(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
 
+;;; 
 (provide 'setup-javascript)
 ;;; setup-javascript.el ends here

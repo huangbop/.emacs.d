@@ -52,6 +52,7 @@
 		 golden-ratio
 		 flycheck
 		 web-beautify
+		 tern
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
