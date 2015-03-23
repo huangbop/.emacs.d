@@ -53,6 +53,7 @@
 		 flycheck
 		 web-beautify
 		 tern
+		 company-tern
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)

@@ -31,6 +31,9 @@
 (setq tern-command (cons (executable-find "tern") '()))
 (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
 
+(require 'company-tern)
+(add-to-list 'company-backends 'company-tern)
+
 ;;; 
 (provide 'setup-javascript)
 ;;; setup-javascript.el ends here
