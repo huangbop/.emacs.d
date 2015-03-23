@@ -50,6 +50,7 @@
 		 js2-mode
 		 js-comint
 		 golden-ratio
+		 flycheck
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)

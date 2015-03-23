@@ -1,5 +1,9 @@
 (global-set-key (kbd "<f1>") 'evil-mode)
 
+;;; flycheck
+(require 'flycheck)
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 ;; Company
 (require 'company)
 (global-company-mode)
