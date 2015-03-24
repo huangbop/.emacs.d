@@ -60,6 +60,7 @@
 		 clj-refactor
 		 flycheck-pos-tip
 		 json-mode
+		 company-jedi
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)

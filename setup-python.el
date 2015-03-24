@@ -1,4 +1,3 @@
-
 ;;; jedi
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot t
@@ -24,5 +23,10 @@
 ;;; debug
 (setq gud-pdb-command-name "python -m pdb")
 
+;;; company
+(require 'company-jedi)
+(add-to-list 'company-backends 'company-jedi)
 
+;;; 
 (provide 'setup-python)
+;;;
