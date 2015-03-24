@@ -1,3 +1,8 @@
+;;; json
+(require 'json-mode)
+(add-hook 'js-mode-hook (lambda ()
+			  (setq js-indent-level 2)))
+
 (require 'js2-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
@@ -5,6 +10,7 @@
 (require 'js-comint)
 (setq inferior-js-program-command "node --interactive")
 (add-hook 'js2-mode-hook '(lambda ()
+			    (setq js2-basic-offset 2)
 			    (local-set-key (kbd "C-c C-p") 'run-js)
 			    (local-set-key "\C-x\C-e" 'js-send-last-sexp)
 			    (local-set-key "\C-\M-x" 'js-send-last-sexp-and-go)
@@ -33,9 +39,6 @@
 
 (require 'company-tern)
 (add-to-list 'company-backends 'company-tern)
-
-;;; json
-(require 'json-mode)
 
 ;;; 
 (provide 'setup-javascript)
