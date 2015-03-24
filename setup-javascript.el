@@ -34,6 +34,9 @@
 (require 'company-tern)
 (add-to-list 'company-backends 'company-tern)
 
+;;; json
+(require 'json-mode)
+
 ;;; 
 (provide 'setup-javascript)
 ;;; setup-javascript.el ends here

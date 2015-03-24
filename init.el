@@ -59,6 +59,7 @@
 		 hl-sexp
 		 clj-refactor
 		 flycheck-pos-tip
+		 json-mode
 		 window-numbering))
 (require 'setup-packages)
 (install-packages packages)
