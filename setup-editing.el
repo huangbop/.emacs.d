@@ -18,6 +18,9 @@
 (setq backup-directory-alist
       '(("." . "~/.backups")))
 
+;;; disable auto save
+(setq auto-save-default nil)
+
 ;; ace
 (require 'ace-jump-mode)
 (global-set-key (kbd "C-;") 'ace-jump-mode)
