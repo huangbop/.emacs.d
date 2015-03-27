@@ -14,7 +14,7 @@
 (when (fboundp 'set-scroll-bar-mode)
   (set-scroll-bar-mode nil))
 
-(set-fringe-mode -1)
+;; (set-fringe-mode -1)
 
 (blink-cursor-mode -1)
 (column-number-mode)
