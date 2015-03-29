@@ -1,5 +1,7 @@
 (global-set-key (kbd "<f1>") 'evil-mode)
 
+(global-linum-mode 1)
+
 ;;; flycheck
 (require 'flycheck)
 (add-hook 'after-init-hook #'global-flycheck-mode)
