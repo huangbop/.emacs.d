@@ -1,5 +1,3 @@
-
-
 (defun toggle-fullscreen ()
   (interactive)
   (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen)
@@ -34,9 +32,6 @@
 (autoload 'zap-up-to-char "misc"
   'interactive)
 (global-set-key (kbd "M-z") 'zap-up-to-char)
-
-(require 'ace-jump-zap)
-(global-set-key (kbd "M-:") 'ace-jump-zap-up-to-char)
 
 ;; webjump
 (require 'webjump)

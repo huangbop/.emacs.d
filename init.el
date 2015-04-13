@@ -32,7 +32,6 @@
 		 ioccur
 		 aok
 		 wgrep
-		 ace-jump-zap
 		 occur-x
 		 change-inner
 		 visible-mark

@@ -1,5 +1,3 @@
-
-;; theme
 (load-theme 'monokai t)
 
 ;; frame basis
