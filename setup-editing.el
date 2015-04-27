@@ -2,6 +2,15 @@
 
 (global-linum-mode 1)
 
+;;; Hideshow
+(dolist (hook '(c-mode-hook python-mode-hook java-mode-hook))
+  (add-hook hook
+	    (lambda ()
+	      (hs-minor-mode 1)
+	      (define-key hs-minor-mode-map (kbd "C-h") 'hs-toggle-hiding)
+	      (define-key hs-minor-mode-map (kbd "C-c 9") 'hs-hide-all)
+	      (define-key hs-minor-mode-map (kbd "C-c 0") 'hs-show-all))))
+
 ;;; flycheck
 (require 'flycheck)
 (add-hook 'after-init-hook #'global-flycheck-mode)
