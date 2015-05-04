@@ -5,9 +5,9 @@
 (require 'window-numbering)
 (window-numbering-mode 1)
 
-;;; golden ratio
-(require 'golden-ratio)
-(global-set-key (kbd "<C-f12>") 'golden-ratio-mode)
+;;; Register jump
+(global-set-key (kbd "M-S-SPC") 'point-to-register)
+(global-set-key (kbd "M-J") 'jump-to-register)
 
 ;; winner
 (winner-mode 1)

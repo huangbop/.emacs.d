@@ -48,7 +48,6 @@
 		 rainbow-delimiters
 		 js2-mode
 		 js-comint
-		 golden-ratio
 		 flycheck
 		 web-beautify
 		 tern
