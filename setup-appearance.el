@@ -17,7 +17,7 @@
 (blink-cursor-mode -1)
 (column-number-mode)
 
-(set-default-font "Consolas-11")
+(set-default-font "Consolas-10")
 
 (set-default 'truncate-lines t)
 (setq truncate-partial-width-windows nil)
