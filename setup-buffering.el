@@ -5,6 +5,10 @@
 (require 'window-numbering)
 (window-numbering-mode 1)
 
+;;; Speedbar
+(require 'sr-speedbar)
+(global-set-key (kbd "<C-f12>") 'sr-speedbar-toggle)
+
 ;;; Register jump
 (global-set-key (kbd "M-S-SPC") 'point-to-register)
 (global-set-key (kbd "M-J") 'jump-to-register)

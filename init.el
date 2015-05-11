@@ -60,6 +60,7 @@
 		 json-mode
 		 company-jedi
 		 ggtags
+		 sr-speedbar
 		 window-numbering))
 
 (require 'setup-packages)
