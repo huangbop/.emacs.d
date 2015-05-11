@@ -61,6 +61,7 @@
 		 company-jedi
 		 ggtags
 		 sr-speedbar
+		 helm
 		 window-numbering))
 
 (require 'setup-packages)

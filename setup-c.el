@@ -6,12 +6,10 @@
 	    (define-key hide-ifdef-mode-map (kbd "M-(") 'hide-ifdef-block)
 	    (define-key hide-ifdef-mode-map (kbd "M-)") 'show-ifdef-block)))
 
-;;; ggtags
-(require 'ggtags)
-(add-hook 'c-mode-common-hook
-          (lambda ()
-            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
-              (ggtags-mode 1))))
+;;; Helm
+(require 'helm)
+(require 'helm-config)
+(helm-mode 1)
 
 ;; semantic
 (semantic-mode 1)
