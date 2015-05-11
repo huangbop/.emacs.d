@@ -6,15 +6,12 @@
 	    (define-key hide-ifdef-mode-map (kbd "M-(") 'hide-ifdef-block)
 	    (define-key hide-ifdef-mode-map (kbd "M-)") 'show-ifdef-block)))
 
-;; cscope
-(require 'xcscope)
-(define-key cscope:map (kbd "C-,") 'cscope-find-this-symbol)
-(define-key cscope:map (kbd "C-.") 'cscope-find-global-definition)
-(define-key cscope:map (kbd "M-,") 'cscope-find-functions-calling-this-function)
-(define-key cscope:map (kbd "M-.") 'cscope-find-called-functions)
-(define-key cscope:map (kbd "M-P") 'cscope-prev-symbol)
-(define-key cscope:map (kbd "M-N") 'cscope-next-symbol)
-(define-key cscope:map (kbd "M-*") 'cscope-pop-mark)
+;;; ggtags
+(require 'ggtags)
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+              (ggtags-mode 1))))
 
 ;; semantic
 (semantic-mode 1)

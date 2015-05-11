@@ -59,7 +59,9 @@
 		 flycheck-pos-tip
 		 json-mode
 		 company-jedi
+		 ggtags
 		 window-numbering))
+
 (require 'setup-packages)
 (install-packages packages)
 
