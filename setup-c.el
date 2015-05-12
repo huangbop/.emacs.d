@@ -20,19 +20,15 @@
 
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
-;;; helm gtags
-(require 'helm-gtags)
-(add-hook 'c-mode-hook 'helm-gtags-mode)
-(add-hook 'c++-mode-hook 'helm-gtags-mode)
-(add-hook 'asm-mode-hook 'helm-gtags-mode)
-(add-hook 'dired-mode-hook 'helm-gtags-mode)
-(add-hook 'eshell-mode-hook 'helm-gtags-mode)
-
-(define-key helm-gtags-mode-map (kbd "C-,") 'helm-gtags-find-symbol)
-(define-key helm-gtags-mode-map (kbd "C-.") 'helm-gtags-dwim)
-(define-key helm-gtags-mode-map (kbd "M-P") 'helm-gtags-previous-history)
-(define-key helm-gtags-mode-map (kbd "M-N") 'helm-gtags-next-history)
-(define-key helm-gtags-mode-map (kbd "M-*") 'helm-gtags-pop-stack)
+;; cscope
+(require 'xcscope)
+(define-key cscope:map (kbd "C-,") 'cscope-find-this-symbol)
+(define-key cscope:map (kbd "C-.") 'cscope-find-global-definition)
+(define-key cscope:map (kbd "M-,") 'cscope-find-functions-calling-this-function)
+(define-key cscope:map (kbd "M-.") 'cscope-find-called-functions)
+(define-key cscope:map (kbd "M-P") 'cscope-prev-symbol)
+(define-key cscope:map (kbd "M-N") 'cscope-next-symbol)
+(define-key cscope:map (kbd "M-*") 'cscope-pop-mark)
 
 ;; GUD
 (global-set-key (kbd "<f5>") 'gud-cont)
