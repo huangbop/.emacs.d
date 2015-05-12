@@ -20,15 +20,16 @@
 
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
-;; cscope
-(require 'xcscope)
-(define-key cscope:map (kbd "C-,") 'cscope-find-this-symbol)
-(define-key cscope:map (kbd "C-.") 'cscope-find-global-definition)
-(define-key cscope:map (kbd "M-,") 'cscope-find-functions-calling-this-function)
-(define-key cscope:map (kbd "M-.") 'cscope-find-called-functions)
-(define-key cscope:map (kbd "M-P") 'cscope-prev-symbol)
-(define-key cscope:map (kbd "M-N") 'cscope-next-symbol)
-(define-key cscope:map (kbd "M-*") 'cscope-pop-mark)
+;;; helm gtags
+(require 'helm-gtags)
+(add-hook 'c-mode-hook 'helm-gtags-mode)
+(add-hook 'c++-mode-hook 'helm-gtags-mode)
+(add-hook 'asm-mode-hook 'helm-gtags-mode)
+(add-hook 'dired-mode-hook 'helm-gtags-mode)
+(add-hook 'eshell-mode-hook 'helm-gtags-mode)
+
+(define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
+(define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
 
 ;; GUD
 (global-set-key (kbd "<f5>") 'gud-cont)
