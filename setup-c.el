@@ -20,7 +20,21 @@
 
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
-;; gud
+;;; helm gtags
+(require 'helm-gtags)
+(add-hook 'c-mode-hook 'helm-gtags-mode)
+(add-hook 'c++-mode-hook 'helm-gtags-mode)
+(add-hook 'asm-mode-hook 'helm-gtags-mode)
+(add-hook 'dired-mode-hook 'helm-gtags-mode)
+(add-hook 'eshell-mode-hook 'helm-gtags-mode)
+
+(define-key helm-gtags-mode-map (kbd "C-,") 'helm-gtags-find-symbol)
+(define-key helm-gtags-mode-map (kbd "C-.") 'helm-gtags-dwim)
+(define-key helm-gtags-mode-map (kbd "M-P") 'helm-gtags-previous-history)
+(define-key helm-gtags-mode-map (kbd "M-N") 'helm-gtags-next-history)
+(define-key helm-gtags-mode-map (kbd "M-*") 'helm-gtags-pop-stack)
+
+;; GUD
 (global-set-key (kbd "<f5>") 'gud-cont)
 (global-set-key (kbd "<f7>") 'gud-up)
 (global-set-key (kbd "<f8>") 'gud-down)

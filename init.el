@@ -62,6 +62,7 @@
 		 ggtags
 		 sr-speedbar
 		 helm
+		 helm-gtags
 		 window-numbering))
 
 (require 'setup-packages)
