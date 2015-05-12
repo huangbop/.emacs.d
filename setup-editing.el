@@ -13,7 +13,7 @@
 
 ;;; flycheck
 (require 'flycheck)
-;; (add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; Company
 (require 'company)
