@@ -70,7 +70,6 @@
 ;;; modules
 (defvar modules '(setup-appearance
 		  setup-editing
-		  setup-ido
 		  setup-buffering
 		  setup-utilities
 		  setup-lisp

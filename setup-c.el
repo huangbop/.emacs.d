@@ -11,9 +11,14 @@
 (require 'helm-config)
 (helm-mode 1)
 
-;; semantic
-(semantic-mode 1)
-(global-semantic-idle-summary-mode 1)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(setq helm-M-x-fuzzy-match t)
+
+(global-set-key (kbd "C-x b") 'helm-mini)
+(setq helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match t)
+
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 ;; gud
 (global-set-key (kbd "<f5>") 'gud-cont)
