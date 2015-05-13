@@ -1,5 +1,7 @@
 (setq c-default-style "linux")
 
+(global-set-key (kbd "C-c c") 'whitespace-cleanup)
+
 ;; hideif
 (add-hook 'c-mode-hook
 	  (lambda () (hide-ifdef-mode 1)
@@ -46,6 +48,8 @@
 (global-semantic-idle-scheduler-mode 1)
 
 (semantic-mode 1)
+
+(global-semantic-idle-summary-mode 1)
 
 ;;; company c headers
 (require 'company-c-headers)
