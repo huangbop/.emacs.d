@@ -64,7 +64,7 @@
 		 helm
 		 helm-gtags
 		 company-c-headers
-		 projectile
+		 helm-projectile
 		 window-numbering))
 
 (require 'setup-packages)
