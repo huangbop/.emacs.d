@@ -7,6 +7,7 @@
 
 ;;; Speedbar
 (require 'sr-speedbar)
+(setq speedbar-show-unknown-files t)
 (global-set-key (kbd "<C-f12>") 'sr-speedbar-toggle)
 
 ;;; Register jump
