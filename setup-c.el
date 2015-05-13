@@ -1,6 +1,6 @@
 (setq c-default-style "linux")
 
-(global-set-key (kbd "C-c C-c") 'whitespace-cleanup)
+(global-set-key (kbd "C-c c") 'whitespace-cleanup)
 
 ;; hideif
 (add-hook 'c-mode-hook
