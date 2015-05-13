@@ -47,6 +47,10 @@
 
 (semantic-mode 1)
 
+;;; company c headers
+(require 'company-c-headers)
+(add-to-list 'company-backends 'company-c-headers)
+
 ;; GUD
 (global-set-key (kbd "<f5>") 'gud-cont)
 (global-set-key (kbd "<f7>") 'gud-up)

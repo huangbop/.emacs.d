@@ -63,6 +63,7 @@
 		 sr-speedbar
 		 helm
 		 helm-gtags
+		 company-c-headers
 		 window-numbering))
 
 (require 'setup-packages)
