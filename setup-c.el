@@ -39,6 +39,14 @@
 (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
 (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
 
+;;; Semantic
+(require 'semantic)
+
+(global-semanticdb-minor-mode 1)
+(global-semantic-idle-scheduler-mode 1)
+
+(semantic-mode 1)
+
 ;; GUD
 (global-set-key (kbd "<f5>") 'gud-cont)
 (global-set-key (kbd "<f7>") 'gud-up)
