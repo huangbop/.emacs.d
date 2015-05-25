@@ -60,6 +60,7 @@
 
 (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
 (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
+(define-key helm-gtags-mode-map (kbd "C-t") nil)
 
 ;;; Semantic
 (require 'semantic)
