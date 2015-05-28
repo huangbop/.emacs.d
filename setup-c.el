@@ -70,8 +70,6 @@
 
 (semantic-mode 1)
 
-(global-semantic-idle-summary-mode 1)
-
 ;;; company c headers
 (require 'company-c-headers)
 (add-to-list 'company-backends 'company-c-headers)
