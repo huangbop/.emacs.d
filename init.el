@@ -64,6 +64,7 @@
 		 helm-gtags
 		 company-c-headers
 		 helm-projectile
+		 pyvenv
 		 window-numbering))
 
 (require 'setup-packages)

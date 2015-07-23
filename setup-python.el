@@ -7,6 +7,10 @@
   '(define-key python-mode-map "\C-cx" 'jedi-direx:pop-to-buffer))
 (add-hook 'jedi-mode-hook 'jedi-direx:setup)
 
+;;; pyvenv
+(require 'pyvenv)
+(add-hook 'python-mode-hook '(lambda () (pyvenv-mode 1)))
+
 ;;; ipython
 (setq
  python-shell-interpreter "ipython"
