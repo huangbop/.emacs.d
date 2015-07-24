@@ -11,9 +11,9 @@
 	      (define-key hs-minor-mode-map (kbd "C-c 9") 'hs-hide-all)
 	      (define-key hs-minor-mode-map (kbd "C-c 0") 'hs-show-all))))
 
-;;; flycheck
-(require 'flycheck)
-(add-hook 'after-init-hook #'global-flycheck-mode)
+;; ;;; flycheck
+;; (require 'flycheck)
+;; (add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; Company
 (require 'company)
