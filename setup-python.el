@@ -27,6 +27,12 @@
 ;;; debug
 (setq gud-pdb-command-name "python -m pdb")
 
+(defun annotate-pdb ()
+  (interactive)
+  (highlight-lines-matching-regexp "import pdb")
+  (highlight-lines-matching-regexp "pdb.set_trace()"))
+(add-hook 'python-mode-hook 'annotate-pdb)
+
 ;;; company
 (require 'company-jedi)
 (add-to-list 'company-backends 'company-jedi)
