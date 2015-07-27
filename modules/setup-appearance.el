@@ -23,6 +23,7 @@
 (set-default 'truncate-lines t)
 (setq truncate-partial-width-windows nil)
 
+
 (provide 'setup-appearance)
 
 ;;; setup-appearance.el ends here
