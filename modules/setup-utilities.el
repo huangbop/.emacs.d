@@ -8,10 +8,12 @@
 ;; ascii
 (require 'ascii)
 
-;; Magit
-(require 'magit)
-(global-set-key (kbd "C-x g") 'magit-status)
-(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+;; egg
+(require 'egg)
+(global-set-key (kbd "C-x v t") 'egg-status-buffer-stash-wip)
+(global-set-key (kbd "C-x v s") 'egg-status)
+(global-set-key (kbd "C-x v l") 'egg-log)
+(global-set-key (kbd "C-x v `") 'vc-revision-other-window)
 
 ;; grep
 (global-set-key (kbd "M-s g") 'grep)

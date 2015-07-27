@@ -5,11 +5,17 @@
 
 ;; packages
 (setq packages '(monokai-theme
+		 ido-ubiquitous
+		 ido-vertical-mode
+		 flx-ido
+		 smex
+		 egg
 		 ace-jump-mode
 		 smartparens
 		 expand-region
 		 centered-cursor-mode
 		 multiple-cursors
+		 auto-complete
 		 dired+
 		 buffer-move
 		 yasnippet
@@ -59,7 +65,6 @@
 		 company-c-headers
 		 helm-projectile
 		 pyvenv
-		 magit
 		 window-numbering))
 
 (require 'setup-packages)
